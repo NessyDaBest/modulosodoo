@@ -3,32 +3,30 @@
     'name': "videoclub_nestor",
 
     'summary': "Short (1 phrase/line) summary of the module's purpose",
-
+    'license': "AGPL-3",
     'description': """
-Long description of module's purpose
+    Modulo de odoo sobre un videoclub creado con scaffolding y sincronizado con GitHub
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'author': "Néstor Montoro Molina",
+    'website': "https://github.com/NessyDaBest/modulosodoo",
+    'category': 'Tools',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
+        #'security/ir.model.access.csv',
+        'views/videoclub.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'application': True,
+    'installable': True,
 }
 
