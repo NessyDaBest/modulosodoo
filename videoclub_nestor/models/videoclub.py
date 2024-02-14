@@ -22,6 +22,9 @@ class videoclub_pelis(models.Model):
     # Nuevo campo de imagen
     imagen = fields.Image("imagen")
 
+    # Categoria de pelicula
+    categoria_id = fields.Many2one('videoclub.categorias', string="Categoría")
+
     @api.depends('presupuesto')
     def _valor_subvencion(self):
         for record in self:
@@ -36,3 +39,11 @@ class videoclub_pelis(models.Model):
     def _es_millonario(self):
         for record in self:
             record.millonario = record.presupuesto > 1000000
+
+class videoclub_categorias(models.Model):
+    _name = 'videoclub.categorias'
+    _description = 'Categoría de Películas'
+
+    name = fields.Char('Nombre', required=True)
+    descripcion = fields.Text('Descripción')
+    pelis_ids = fields.One2many('videoclub.pelis', 'categoria_id', string="Películas")

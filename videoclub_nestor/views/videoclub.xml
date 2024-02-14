@@ -79,6 +79,68 @@
       </field>
     </record>
 
+    <!-- Definiciones de vistas para Categorías -->
+    <!-- Vista de formulario para Categorías -->
+    <record model="ir.ui.view" id="videoclub_nestor.categorias_form">
+      <field name="name">videoclub_nestor.categorias_form</field>
+      <field name="model">videoclub.categorias</field>
+      <field name="arch" type="xml">
+        <form string="Categoría">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="descripcion"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vista de árbol para Categorías -->
+    <record model="ir.ui.view" id="videoclub_nestor.categorias_tree">
+      <field name="name">videoclub_nestor.categorias_tree</field>
+      <field name="model">videoclub.categorias</field>
+      <field name="arch" type="xml">
+        <tree string="Categorías">
+          <field name="name"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista Kanban para Categorías -->
+    <record model="ir.ui.view" id="videoclub_nestor.categorias_kanban">
+      <field name="name">videoclub_nestor.categorias_kanban</field>
+      <field name="model">videoclub.categorias</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <field name="id"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_global_click">
+                <field name="name"/>
+                <div><field name="descripcion"/></div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <!-- Acción de ventana para Categorías -->
+    <record model="ir.actions.act_window" id="videoclub_nestor.categorias_ventana">
+      <field name="name">Categorías</field>
+      <field name="res_model">videoclub.categorias</field>
+      <field name="view_mode">kanban,tree,form</field>
+      <field name="help" type="html">
+        <h1>Categorías de Películas</h1>
+        <p>Gestiona las categorías de las películas aquí.</p>
+      </field>
+    </record>
+
+    <!-- Menú para Categorías -->
+    <menuitem name="Categorías" id="videoclub_nestor.menu_categorias" parent="videoclub_nestor.gestion_pelis" action="videoclub_nestor.categorias_ventana"/>
+
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="videoclub_nestor.pelis_ventana">
       <field name="name">Peliculas</field>

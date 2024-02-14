@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_videoclub_nestor_jefe,Jefe de Pelis,videoclub_nestor.model_videoclub_pelis,videoclub_jefe,1,1,1,1
 access_videoclub_nestor_becario,Becario de Pelis,videoclub_nestor.model_videoclub_pelis,videoclub_becario,1,1,0,0
+access_videoclub_nestor_categorias_jefe,Jefe de Categorías Pelis,videoclub_nestor.model_videoclub_categorias,videoclub_jefe,1,1,1,1
