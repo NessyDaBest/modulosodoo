@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="videoclub_sge.pelis_arbol">
+    <record model="ir.ui.view" id="videoclub_nestor.pelis_arbol">
       <field name="name">videoclub_nestor.pelis_arbol</field>
       <field name="model">videoclub.pelis</field>
       <field name="arch" type="xml">
@@ -15,7 +15,7 @@
       </field>
     </record>
 
-    <record model="ir.ui.view" id="videoclub_sge.pelis_arbol">
+    <record model="ir.ui.view" id="videoclub_nestor.pelis_arbol">
       <field name="name">videoclub_nestor.pelis_arbol</field>
       <field name="model">videoclub.pelis</field>
       <field name="arch" type="xml">
@@ -30,7 +30,7 @@
     </record>
 
     <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="videoclub_sge.pelis_ventana">
+    <record model="ir.actions.act_window" id="videoclub_nestor.pelis_ventana">
       <field name="name">Peliculas</field>
       <field name="res_model">videoclub.pelis</field> <!--modelo asociado-->
       <field name="view_mode">tree,form,kanban</field> <!--tipos de vistas-->
@@ -41,11 +41,11 @@
     </record>
 
     <!-- Top menu item -->
-    <menuitem name="VIDEOCLUB" id="videoclub_sge.menu_root"/>
+    <menuitem name="VIDEOCLUB" id="videoclub_nestor.menu_root"/>
 
     <!-- menu categories -->
-    <menuitem name="Gestión Pelis" id="videoclub_sge.gestion_pelis" parent="videoclub_sge.menu_root" />
-    <menuitem name="Pelis" id="videoclub_sge.menu_pelis" parent="videoclub_sge.gestion_pelis" action="videoclub_sge.pelis_ventana" />
+    <menuitem name="Gestión Pelis" id="videoclub_nestor.gestion_pelis" parent="videoclub_nestor.menu_root" />
+    <menuitem name="Pelis" id="videoclub_nestor.menu_pelis" parent="videoclub_nestor.gestion_pelis" action="videoclub_nestor.pelis_ventana" />
 
   </data>
 </odoo>

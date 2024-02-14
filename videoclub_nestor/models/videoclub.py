@@ -4,7 +4,6 @@ from odoo import models, fields, api
 class videoclub_pelis(models.Model):
     #atributos
     _name = 'videoclub.pelis'
-    _rec_name = 'videoclub.pelis'
     _description = 'Película'
     #campos
     titulo = fields.Char('Titulo', size=30, required=True, help='Nombre de la peli')
