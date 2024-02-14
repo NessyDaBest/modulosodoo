@@ -18,7 +18,8 @@
 
     # always loaded
     'data': [
-        #'security/ir.model.access.csv',
+        'security/videoclub_security.xml',
+        'security/ir.model.access.csv',
         'views/videoclub.xml',
         'views/templates.xml',
     ],

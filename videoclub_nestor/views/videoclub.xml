@@ -1,60 +1,51 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="videoclub_nestor.list">
-      <field name="name">videoclub_nestor list</field>
-      <field name="model">videoclub_nestor.videoclub_nestor</field>
+    <record model="ir.ui.view" id="videoclub_sge.pelis_arbol">
+      <field name="name">videoclub_nestor.pelis_arbol</field>
+      <field name="model">videoclub.pelis</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="titulo"/>
+          <field name="director"/>
+          <field name="clasificacion"/>
+          <field name="presupuesto"/>
+          <field name="fechaestreno"/>
         </tree>
       </field>
     </record>
--->
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="videoclub_nestor.action_window">
-      <field name="name">videoclub_nestor window</field>
-      <field name="res_model">videoclub_nestor.videoclub_nestor</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="videoclub_nestor.action_server">
-      <field name="name">videoclub_nestor server</field>
-      <field name="model_id" ref="model_videoclub_nestor_videoclub_nestor"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
+    <record model="ir.ui.view" id="videoclub_sge.pelis_arbol">
+      <field name="name">videoclub_nestor.pelis_arbol</field>
+      <field name="model">videoclub.pelis</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="titulo"/>
+          <field name="director"/>
+          <field name="clasificacion"/>
+          <field name="presupuesto"/>
+          <field name="fechaestreno"/>
+        </tree>
       </field>
     </record>
--->
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="videoclub_sge.pelis_ventana">
+      <field name="name">Peliculas</field>
+      <field name="res_model">videoclub.pelis</field> <!--modelo asociado-->
+      <field name="view_mode">tree,form,kanban</field> <!--tipos de vistas-->
+      <field name="help" type="html"> <!-- ayuda si no hay campos -->
+        <h1> VIDEOCLUB </h1>
+        <p> LISTA DE PELIS VACÍA </p>
+      </field>
+    </record>
 
     <!-- Top menu item -->
-<!--
-    <menuitem name="videoclub_nestor" id="videoclub_nestor.menu_root"/>
--->
+    <menuitem name="VIDEOCLUB" id="videoclub_sge.menu_root"/>
+
     <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="videoclub_nestor.menu_1" parent="videoclub_nestor.menu_root"/>
-    <menuitem name="Menu 2" id="videoclub_nestor.menu_2" parent="videoclub_nestor.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="videoclub_nestor.menu_1_list" parent="videoclub_nestor.menu_1"
-              action="videoclub_nestor.action_window"/>
-    <menuitem name="Server to list" id="videoclub_nestor" parent="videoclub_nestor.menu_2"
-              action="videoclub_nestor.action_server"/>
--->
+    <menuitem name="Gestión Pelis" id="videoclub_sge.gestion_pelis" parent="videoclub_sge.menu_root" />
+    <menuitem name="Pelis" id="videoclub_sge.menu_pelis" parent="videoclub_sge.gestion_pelis" action="videoclub_sge.pelis_ventana" />
+
   </data>
 </odoo>
