@@ -52,7 +52,9 @@ class videoclub_categorias(models.Model):
     descripcion = fields.Text('Descripción')
     pelis_ids = fields.One2many('videoclub.pelis', 'categoria_id', string="Películas")
 
-class compania_cinematografica(models.Model):
+  
+
+#class compania_cinematografica(models.Model):
     #_name = 'res.partner' --no hace falta
-    _inherit = 'res.partner'
-    premiada = fields.Boolean(default='false')
+    #_inherit = 'res.partner'
+    #premiada = fields.Boolean(default='false')

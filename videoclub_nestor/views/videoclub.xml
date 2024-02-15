@@ -166,7 +166,8 @@
     <menuitem name="Gestión Pelis" id="videoclub_nestor.gestion_pelis" parent="videoclub_nestor.menu_root" />
     <menuitem name="Pelis" id="videoclub_nestor.menu_pelis" parent="videoclub_nestor.gestion_pelis" action="videoclub_nestor.pelis_ventana" />
 
-    <!-- vista arbol de compania -->
+    <!--
+      
     <record model="ir.ui.view" id="videoclub_nestor.companias_arbol">
       <field name="name">videoclub_nestor.companias_arbol</field>
       <field name="model">res.partner</field>
@@ -178,9 +179,11 @@
       </field>
     </record>
 
-    <!-- vista formulario de la compania -->
-    <record model="ir.ui.view" id="videoclub_sge.companias_formulario">
-            <field name="name">videoclub_sge.companias_formulario</field>
+
+    
+    
+    <record model="ir.ui.view" id="videoclub_nestor.companias_formulario">
+            <field name="name">videoclub_nestor.companias_formulario</field>
             <field name="model">res.partner</field>
             <field name="arch" type="xml">
               <form string="compania">
@@ -201,14 +204,14 @@
     ref="videoclub_nestor.companias_ventana"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="videoclub_sge.companias_ventana_view_formulario" >
+    <record model="ir.actions.act_window.view" id="videoclub_nestor.companias_ventana_view_formulario" >
             <field name="sequence" eval="2"></field>
             <field name="view_mode">form</field>
-            <field name="view_id" ref="videoclub_sge.companias_formulario"></field>
-            <field name="act_window_id" ref="videoclub_sge.companias_ventana"></field>
+            <field name="view_id" ref="videoclub_nestor.companias_formulario"></field>
+            <field name="act_window_id" ref="videoclub_nestor.companias_ventana"></field>
     </record>
 
-    <!-- menu companias -->
+    
     <record model="ir.actions.act_window" id="videoclub_nestor.companias_ventana" >
       <field name="name">Compañías</field>
       <field name="res_model">res.partner</field>
@@ -221,6 +224,7 @@
     <menuitem name="Compañías" id="videoclub_nestor.menu_companias"
     parent="videoclub_nestor.gestion_companias" action="videoclub_nestor.companias_ventana" />
 
+    -->
     
 
 
