@@ -25,6 +25,10 @@ class videoclub_pelis(models.Model):
     # Categoria de pelicula
     categoria_id = fields.Many2one('videoclub.categorias', string="Categoría")
 
+    #Nueva relación Relación en las pelis
+    compania = fields.Many2one('res.partner')
+
+
     @api.depends('presupuesto')
     def _valor_subvencion(self):
         for record in self:
@@ -47,3 +51,8 @@ class videoclub_categorias(models.Model):
     name = fields.Char('Nombre', required=True)
     descripcion = fields.Text('Descripción')
     pelis_ids = fields.One2many('videoclub.pelis', 'categoria_id', string="Películas")
+
+class compania_cinematografica(models.Model):
+    #_name = 'res.partner' --no hace falta
+    _inherit = 'res.partner'
+    premiada = fields.Boolean(default='false')
