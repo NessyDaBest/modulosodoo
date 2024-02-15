@@ -190,6 +190,7 @@
                 <group string="COMPAÑIA CINEMATOGRÁFICA">
                   <field name="name"/>
                   <field name="premiada"/>
+                  <field name="is_cine" attrs="{'invisible':True}"/>
                 </group>
               </form>
             </field>

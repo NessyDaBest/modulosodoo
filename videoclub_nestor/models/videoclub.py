@@ -58,3 +58,4 @@ class videoclub_categorias(models.Model):
     #_name = 'res.partner' --no hace falta
     #_inherit = 'res.partner'
     #premiada = fields.Boolean(default='false')
+    #is_cine=fields.Boolean()
