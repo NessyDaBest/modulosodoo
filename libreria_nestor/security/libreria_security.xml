@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Grupo para jefes de la libreria -->
+    <record id="libreria_jefe" model="res.groups">
+        <field name="name">Libreria / Jefe</field>
+    </record>
+    <!--Grupo para becarios de la libreria -->
+    <record id="libreria_becario" model="res.groups">
+        <field name="name">Libreria / Becario</field>
+    </record>
+</odoo>
